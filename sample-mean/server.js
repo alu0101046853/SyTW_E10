@@ -1,4 +1,7 @@
 // Setup
+// Modificación realizada por Edgar
+var sytw = require('sobresaliente');
+
 var express = require('express');
 var app = express();                                              // create our app w/ express
 var mongoose = require('mongoose');                               // mongoose for mongodb
@@ -8,8 +11,6 @@ var paths = require('./config/paths');                            // load the pa
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-
-let pepe=0;
 
 // Configuration
 mongoose.connect(database.remoteUrl);                         // connect to local MongoDB instance. A remoteUrl is also available (modulus.io)
