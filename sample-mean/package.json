@@ -1,7 +1,7 @@
 {
   "name": "node-todo",
   "version": "0.0.1",
-  "description": "Simple todo application.",
+  "description": "Simple todo application. We dont want this application to work properly, we just testing",
   "main": "server.js",
   "author": "Scotch",
   "dependencies": {
