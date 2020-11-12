@@ -8,7 +8,9 @@ var paths = require('./config/paths');                            // load the pa
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+
 let pepe=0;
+
 // Configuration
 mongoose.connect(database.remoteUrl);                         // connect to local MongoDB instance. A remoteUrl is also available (modulus.io)
 app.use(express.static(paths.staticFiles));                   // set the static files location /public/img will be /img for users
