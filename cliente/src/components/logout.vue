@@ -1,20 +1,15 @@
 <template>
-  <div class="home">
-    <button @click="logout" id="logout" v-if="user">logut</button><br>
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div class="usuario">
+    <a v-if="!user"><router-link to="/register">Registrarse</router-link></a>
+    <a v-if="!user"><router-link to="/login"> | Log in</router-link></a>
+    <button v-if="user" v-on:click="logout">Log Out</button>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 import firebase from "firebase";
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  },
+  name: "LogOut",
   data () {
     return {
       user: firebase.auth().currentUser
@@ -31,8 +26,8 @@ export default {
 };
 </script>
 
-<style>
-#logout {
+<style scoped>
+button {
   background-color: red;
   color: white;
 }
