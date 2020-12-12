@@ -1,7 +1,7 @@
 import { createServer } from "http";
 import express from "express";
 import bodyParser from "body-parser";
-import router from "./routes/index";
+import { router } from "./routes/index.js";
 // Se importa http ya que este tiene un cierre seguro
 
 const app = express();
@@ -11,12 +11,13 @@ const PORT = 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(router);
+
 const server = createServer(app);
 
 // rutas
 /* TODO: las rutas deberian ir en ficheros distintos agrupadas por tema
    y hacer un export y aqui un import */
-server.use(router);
 
 // Inicializacion del servidor
 server.listen(PORT || process.env.PORT, () => {
