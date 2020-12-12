@@ -4,11 +4,11 @@ module.exports = {
     node: true
   },
   extends: [
-    'standard'
+    "standard"
   ],
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: "module"
   },
   rules: {
     indent: ["error", 2],
@@ -18,4 +18,4 @@ module.exports = {
     "dot-notation": "off",
     "eol-last": ["error", "never"]
   }
-}
+};
