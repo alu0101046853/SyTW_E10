@@ -12,6 +12,17 @@ app.use(bodyParser.json());
 
 const server = createServer(app);
 
-server.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
+// rutas
+/* TODO: las rutas deberian ir en ficheros distintos agrupadas por tema
+   y hacer un export y aqui un import */
+
+app.get("/", (req, res) => {
+  res.json({ titulo: "Sikili MonAmour" });
 });
+
+// Inicializacion del servidor
+server.listen(PORT || process.env.PORT, () => {
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+});
+
+export { server };
