@@ -1,13 +1,13 @@
-import { Router } from "express";
+import express  from "express";
 
-const router = Router();
+const router = express.Router();
 
 router.get("/", (req, res)  => {
-  res.json({ titulo: "se juntaron Bejo y Luna ki" });
+  return res.status(200).json({ titulo: "se juntaron Bejo y Luna ki" });
 });
 
 router.get("/test", (req,res) => {
-  res.json({
+  return res.status(200).json({
     nombre: "Freddy El Gaveta",
     genero: "M",
     isBald: true
