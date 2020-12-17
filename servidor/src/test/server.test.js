@@ -7,20 +7,20 @@ import request from "supertest";
 
 // // Testeo de endpoints
 describe("GET routes", () => {
-  it("Responde con frase", (done)  => {
+  it("Responde con frase correctamente", (done)  => {
     request(server)
     .get("/")
-    .expect({ titulo: "se juntaron Bejo y Luna ki" })
+    .expect({ titulo: "Petición GET" })
     .expect(200, done)
   }); 
   
-  it("Responde con json", (done) => {
+  it("Responde con archivo de formato JSON correctamente", (done) => {
     request(server)
     .get("/test")
     .expect({
-      nombre: "Freddy El Gaveta",
+      nombre: "Juan Carlos Ozuna Rosado",
       genero: "M",
-      isBald: true,
+      isBald: false,
     })
     .expect(200,done)
   });
