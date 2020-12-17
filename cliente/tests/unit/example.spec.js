@@ -1,9 +1,7 @@
 import { shallowMount, mount } from "@vue/test-utils";
-//import { exportAllDeclaration } from "@babel/types";
 import HelloWorld from "@/components/HelloWorld.vue";
 import Register from "@/views/Register.vue"
 import Login from "@/views/login.vue"
-//import LogOut from "@/components/logout.vue";
 
 describe("HelloWorld.vue", () => {
   it("renders props.msg when passed", () => {
@@ -19,17 +17,17 @@ describe("Register.vue", () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallowMount(Register, {
-      data() {
+      methods: { signUp:() => {} },
+      data () {
         return {
-          email: "hola@gmail.com",
-          password: "hola123",
-          error: false
+          email: "",
+          password: ""
         };
-      }
-    });
+    }
   });
-
-  it("user is successfully registered", () => {
+});
+  
+  it("Usuario registrado correctamente!", () => {
     expect(wrapper.exists()).toBe(true);
   });
 })
@@ -38,7 +36,8 @@ describe("login.vue", () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallowMount(Login, {
-      data() {
+      methods: { Login:() => {} },
+      data () {
         return {
           email: "",
           password: ""
@@ -47,7 +46,7 @@ describe("login.vue", () => {
     });
   });
 
-  it("user has logged in", () => {
+  it("Usuario logueado correctamente!", () => {
     expect(wrapper.exists()).toBe(true);
   });
 })
