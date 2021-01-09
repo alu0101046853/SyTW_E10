@@ -4,9 +4,9 @@ node_js:
 dist: trusty
 sudo: false
 
-branches:
-  only:
-  - master
+#branches:
+#  only:
+#  - master
 
 cache:
   directories:
