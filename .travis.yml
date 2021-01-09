@@ -19,7 +19,10 @@ script:
   - yarn lint
   - npm run test
   - cd ../cliente
-  - npm set maxsockets 3
+  - npm config set proxy false
+  - npm cache clean
+  - npm install --registry=http://registry.npmjs.org/
+  - npm install --registry=http://registry.npm.taobao.org/  
   - npm install
   - npm run test
 
