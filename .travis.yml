@@ -18,9 +18,10 @@ script:
   - npm install
   - yarn lint
   - npm run test
-  # - cd ../cliente
-  # - npm install
-  # - npm run test
+  - npm config set registry="http://registry.npmjs.org/"
+  - cd ../cliente
+  - npm install
+  - npm run test
 
 on: 
   branch: release
