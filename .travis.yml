@@ -12,16 +12,13 @@ cache:
 install:
   - npm install -g yarn
 
-before_script: cd cliente
+before_script: cd servidor
 
 script:
-  - npm install 
-  - yarn lint
-  - npm run test:unit
-
-after_script: cd ../servidor
-
-script:
+  # - npm install 
+  # - yarn lint
+  # - npm run test
+  # - cd ../servidor
   - npm install
   - yarn lint
   - npm run test
