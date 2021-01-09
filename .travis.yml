@@ -17,6 +17,7 @@ before_script: cd servidor
 
 script:
   - yarn lint
+  - npm install
   - npm run test
   - cd ../cliente
   - npm install
