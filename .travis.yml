@@ -21,7 +21,7 @@ script:
   - npm run test
   - cd ../cliente
   - npm config set proxy false
-  - npm install
+  - npm install --prefer-offline --no-audit
   - npm run test
 
 on: 
