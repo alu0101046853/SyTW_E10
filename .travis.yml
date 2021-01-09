@@ -21,7 +21,6 @@ script:
   - npm run test
   - cd ../cliente
   - npm config set proxy false
-  - npm install --registry="http://registry.npm.taobao.org/"
   - npm install
   - npm run test
 
