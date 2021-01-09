@@ -1,10 +1,12 @@
 
-import { server } from "../server.js";
+import { server, stopServer } from "../server.js";
 import request from "supertest";
 
 
 // TODO un after all que cierre el servidor para ello implementar un server.close
-
+afterEach(() => {
+  stopServer();
+});
 // // Testeo de endpoints
 describe("GET routes", () => {
   it("Responde con frase correctamente", (done)  => {
