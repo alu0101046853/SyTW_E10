@@ -1,13 +1,10 @@
 language: node_js
 node_js:
-          - "9"
+          - "15"
 dist: trusty
 sudo: false
 
 #branches:
-#  only:
-#  - master
-
 cache:
   directories:
   - node_modules
@@ -19,4 +16,4 @@ script:
   - yarn lint
 
 on: 
-  branch: nestor
+  branch: edgar
