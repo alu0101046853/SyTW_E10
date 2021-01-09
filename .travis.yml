@@ -12,8 +12,11 @@ cache:
 install:
   - npm install -g yarn
 
+before_script: cd servidor
+
 script: 
   - yarn lint
+  - npm run test
 
 on: 
   branch: edgar
