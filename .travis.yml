@@ -12,15 +12,13 @@ cache:
 
 install:
   - npm install -g yarn
-  
+
 before_script: cd servidor
 
 script:
-  - pnpm install
   - yarn lint
   - npm run test
   - cd ../cliente
-  - npm config set proxy false
   - npm install
   - npm run test
 
