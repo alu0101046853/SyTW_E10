@@ -12,6 +12,7 @@ cache:
 
 install:
   - npm install -g yarn
+  - npm install -g pnpm
 
 before_script: cd servidor
 
@@ -21,7 +22,7 @@ script:
   - npm run test
   - cd ../cliente
   - npm config set proxy false
-  - npm install --prefer-offline --no-audit
+  - pnpm install
   - npm run test
 
 on: 
