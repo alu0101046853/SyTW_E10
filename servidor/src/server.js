@@ -24,4 +24,9 @@ server.listen(PORT || process.env.PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
 
-export { server };
+function stopServer() {
+  console.log("Cerrando el servidor");
+  server.close();
+}
+
+export { server, stopServer };
