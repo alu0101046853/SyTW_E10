@@ -1,9 +1,8 @@
-# os: linux
 language: node_js
 node_js:
   - stable
-# dist: trusty
-# sudo: false
+dist: trusty
+sudo: false
 
 cache:
   directories:
@@ -26,5 +25,5 @@ script:
 on: 
   branch: edgar
 
-# notifications:
-#   slack: sytwull:NkXaHBTkYgaYfp5mhS6MDbuu
+notifications:
+  slack: sytwull:NkXaHBTkYgaYfp5mhS6MDbuu
