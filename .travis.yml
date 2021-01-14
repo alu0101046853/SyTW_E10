@@ -23,5 +23,5 @@ script:
 on: 
   branch: edgar
 
-notifications:
-  slack: sytwull:NkXaHBTkYgaYfp5mhS6MDbuu
+# notifications:
+#   slack: sytwull:NkXaHBTkYgaYfp5mhS6MDbuu
