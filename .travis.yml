@@ -1,0 +1,29 @@
+os: linux
+language: node_js
+node_js:
+  - stable
+dist: xenial
+
+cache:
+  directories:
+  - node_modules
+
+install:
+  - npm install -g yarn
+
+before_script: cd servidor
+
+script:
+  - npm install
+  - yarn lint
+  - npm run test
+  - cd ../cliente
+  - npm install -g @vue/cli
+  - npm install -D filesize@3.6.1
+  - npm install
+  - npm run test
+
+notifications:
+  slack:
+    rooms:
+      - sytwull:NkXaHBTkYgaYfp5mhS6MDbuu#e10

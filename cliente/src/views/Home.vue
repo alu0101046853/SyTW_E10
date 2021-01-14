@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <button @click="logout" id="logout" v-if="user">logut</button><br>
+    <LogOut/>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -9,11 +9,13 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import LogOut from "@/components/logout.vue";
 import firebase from "firebase";
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    HelloWorld,
+    LogOut
   },
   data () {
     return {
@@ -32,8 +34,4 @@ export default {
 </script>
 
 <style>
-#logout {
-  background-color: red;
-  color: white;
-}
 </style>

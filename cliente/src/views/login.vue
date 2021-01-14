@@ -1,6 +1,6 @@
 <template>
 <div class="register">
-  <h1> Esta es la página de Log IN </h1>
+  <h1> Esta es la página de Log In </h1>
   <input type="text" v-model="email" placeholder="Email"><br>
   <input type="password" v-model="password" placeholder="Password"><br>
   <button @click="login">Log In</button>
@@ -22,7 +22,7 @@ export default {
     login: function () {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
         (user) => {
-          alert("Logeado");
+          alert("Loggeado");
           this.$router.replace("home");
         },
         (err) => {
