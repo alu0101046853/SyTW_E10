@@ -1,7 +1,8 @@
+# os: linux
 language: node_js
 node_js:
   - stable
-dist: trusty
+# dist: trusty
 # sudo: false
 
 cache:
