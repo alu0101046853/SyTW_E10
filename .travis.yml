@@ -9,14 +9,14 @@ cache:
   directories:
   - node_modules
 
-# install:
-#   - npm install -g yarn
+install:
+  - npm install -g yarn
 
 before_script: cd servidor
 
 script:
   - npm install
- # - yarn lint
+  - yarn lint
   - npm run test
   - cd ../cliente
   - npm install -g @vue/cli
