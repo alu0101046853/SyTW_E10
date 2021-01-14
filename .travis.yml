@@ -19,7 +19,7 @@ script:
   - npm run test
   - cd ../cliente
   - npm install -g @vue/cli
-  - npm install -D filesize-3.6.1.tgz
+  - npm install -D filesize-3.6.1
   - npm install
   - npm run test
 
