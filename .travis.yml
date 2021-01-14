@@ -1,7 +1,7 @@
 os: linux
 language: node_js
 node_js:
-          - "15"
+  - "7"
 dist: trusty
 sudo: false
 
@@ -27,7 +27,7 @@ on:
   branch: edgar
 
 notifications:
-  slack:
+  slack: sytwull:NkXaHBTkYgaYfp5mhS6MDbuu
     rooms:
       secure: uCnC/2B7DrkASjtUOMNvThAPwiDEaWZrflyeaE0grCfdmZ/sXKal/nD8AJn1YKF5W741bHfL7yzewlqThfx+x2PugsPiMAfs26flbBRTBrjbPorUXX4mZ4diOV4LbgwTr/fjjlog74tx78WhMkIKM7JhxvUwoq6fwv2EcixrryCgnmgHpQ+hyIBa8iEWnmpPl3btzfqsWjXwi07E4bM2RY9ae6XTHvHy/fRfEnvHyA5Mw+ilVjtGHWP1rXJIO6WXQBgJzxCyfFSo1HCf4bDWyjiXZhRbhS43Dw7gP1dGvwOCHbOD8fpAACjxOs8aDIvsYYgHkU7rBzcuIZ1c6zFXteeOxSWjOHNUVqjY5I0CtrsrctEaaEJEjLk4p4ze6NrwCSpe3rS1oWVVHkaFJfFR9qpsPHAxuTpSZAWchDNFPV2pWieCSM9v/X3iQFAcB/gG1T8luZ2dj6hreFeQaCcLDoVmWzaJpgg3vU9NFib5AdH6VvpEWcsR0eHltXThD8dCa5A24Ez8ro9IPiO6mjdTH9/adUehFvrA6rOa/eBYVIDDLRjiOpAX0oxUZJCVRAnVYXo3ay6WWUhHkdxuboIqKRLsPAu4Gd5AiFnEanRtMp5+TxpuijMOuNpVnhhqWObJe13GudvL0I7Kboo6UNUiKcZ8007yxDfg9v2U+fX8cIg=
     on_success: always
