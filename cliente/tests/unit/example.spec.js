@@ -1,6 +1,7 @@
-import { shallowMount} from "@vue/test-utils";
+import { shallowMount} from "@vue/test-utils"
 import Register from "@/components/Register.vue"
 import Login from "@/components/login.vue"
+import LogOut from "@/components/logout.vue"
 
 describe("Register.vue", () => {
   let wrapper;
@@ -42,6 +43,28 @@ describe("login.vue", () => {
   });
 
   it("Log In hecho!", () => {
+    const button = wrapper.find('button');
+    button.trigger('click')
+  });
+})
+
+describe("logout.vue", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallowMount(LogOut, {
+      data () {
+        return {
+          user: "test"
+        };
+      }
+    });
+  });
+
+  it("Conexion echa!", () => {
+    expect(wrapper.exists()).toBe(true);
+  });
+
+  it("Log Out hecho!", () => {
     const button = wrapper.find('button');
     button.trigger('click')
   });

@@ -12,14 +12,12 @@ export default {
   name: "LogOut",
   data () {
     return {
-      user: firebase.auth().currentUser
+      user: ""
     };
   },
   methods: {
     logout: function () {
       firebase.auth().signOut().then(() => {
-        alert("Deslogeado Correctamente");
-        this.$router.replace("login");
       });
     }
   }
