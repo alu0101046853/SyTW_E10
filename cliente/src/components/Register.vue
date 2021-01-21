@@ -22,11 +22,9 @@ export default {
     signUp: function () {
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
         (user) => {
-          alert("Usuario Creado Correctamente");
           this.$router.replace("Home");
         },
         (err) => {
-          alert("oops. " + err.message);
         }
       );
     }
