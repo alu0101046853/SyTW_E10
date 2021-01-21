@@ -22,11 +22,9 @@ export default {
     login: function () {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
         (user) => {
-          alert("Loggeado");
           this.$router.replace("home");
         },
         (err) => {
-          alert("oops. " + err.message);
         }
       );
     }

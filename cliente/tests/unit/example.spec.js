@@ -30,14 +30,19 @@ describe("login.vue", () => {
     wrapper = shallowMount(Login, {
       data () {
         return {
-          email: "",
-          password: ""
+          email: "prueba@prueba.com",
+          password: "prueba123"
         };
       }
     });
   });
 
-  it("Usuario logueado correctamente!", () => {
+  it("Conexion echa!", () => {
     expect(wrapper.exists()).toBe(true);
+  });
+
+  it("Log In hecho!", () => {
+    const button = wrapper.find('button');
+    button.trigger('click')
   });
 })
