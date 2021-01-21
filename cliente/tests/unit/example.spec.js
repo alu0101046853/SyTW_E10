@@ -8,15 +8,19 @@ describe("Register.vue", () => {
     wrapper = shallowMount(Register, {
       data () {
         return {
-          email: "",
-          password: ""
+          email: "prueba@prueba.com",
+          password: "prueba123"
         };
     }
   });
 });
   
-  it("Usuario registrado correctamente!", () => {
+  it("Conexion echa!", () => {
     expect(wrapper.exists()).toBe(true);
+  });
+  it("Sign up hecho!", () => {
+    const button = wrapper.find('button');
+    button.trigger('click')
   });
 })
 
