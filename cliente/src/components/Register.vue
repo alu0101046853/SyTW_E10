@@ -1,17 +1,17 @@
 <template>
 <div class="register">
-  <h1> Esta es la página de Log In </h1>
+  <h1> Esta es la página de Registro </h1>
   <input type="text" v-model="email" placeholder="Email"><br>
   <input type="password" v-model="password" placeholder="Password"><br>
-  <button @click="login">Log In</button>
-  <p>¿No tienes una cuenta? <router-link to="/register">Click aqui</router-link></p>
+  <button @click="signUp">Sign Up</button>
+  <p>¿Ya tienes una cuenta?</p>
 </div>
 </template>
 
 <script>
 import firebase from "firebase";
 export default {
-  name: "login",
+  name: "signUp",
   data () {
     return {
       email: "",
@@ -19,11 +19,11 @@ export default {
     };
   },
   methods: {
-    login: function () {
-      firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+    signUp: function () {
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
         (user) => {
-          alert("Loggeado");
-          this.$router.replace("home");
+          alert("Usuario Creado Correctamente");
+          this.$router.replace("Home");
         },
         (err) => {
           alert("oops. " + err.message);
@@ -35,4 +35,5 @@ export default {
 </script>
 
 <style>
+
 </style>

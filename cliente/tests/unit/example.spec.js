@@ -1,13 +1,11 @@
-import { shallowMount, mount } from "@vue/test-utils";
-import Register from "@/views/Register.vue"
-import Login from "@/views/login.vue"
-
+import { shallowMount} from "@vue/test-utils";
+import Register from "@/components/Register.vue"
+import Login from "@/components/login.vue"
 
 describe("Register.vue", () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallowMount(Register, {
-      methods: { signUp:() => {} },
       data () {
         return {
           email: "",
@@ -26,7 +24,6 @@ describe("login.vue", () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallowMount(Login, {
-      methods: { Login:() => {} },
       data () {
         return {
           email: "",
